@@ -3,8 +3,14 @@
 extends layout
 
 block content
-  h1= "Search recipe"
-  br
-  br
-  input(type = "text") 
-  button(type="button") Search recipes
+  div.row
+    div.col-md-3
+      
+    div.col-md-6
+      h1= "Search recipe"
+      br
+      br
+      input(type = "text") 
+      button.btn.btn-primary(type="button") Search recipes
+
+    div.col-md-3

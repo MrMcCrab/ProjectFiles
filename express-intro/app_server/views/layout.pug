@@ -11,7 +11,23 @@ html
 
 
   body
-  div.container
+  div.container-fluid
+    h1.title= title
+    div.row.navi
+      div.col-md-2
+        img.img-fluid(src="/images/pot-3170687_1280.png")
+      div.mx-auto
+        nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+          div.navbar-nav
+            ul.list-inline
+              li.list-inline-item
+                a.nav-item.nav-link(href="/") Home
+              li.list-inline-item
+                a.nav-item.nav-link(href="/addrecipe") Add recipe
+              li.list-inline-item
+                a.nav-item.nav-link(href="/searchrecipes") Search recipes
+                
+                
     block content
   
     div.footer

@@ -11,7 +11,7 @@ const recipeList = function (req, res) {
     else {
       res.status(200).json(recipes);
     }
-  })
+  });
 };
 
 const addRecipe = function (req, res){
@@ -22,7 +22,7 @@ const addRecipe = function (req, res){
     else {
       res.status(201).json(newRecipe);
     }
-  })
+  });
 };
 
 module.exports = {

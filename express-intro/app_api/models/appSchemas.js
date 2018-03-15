@@ -13,4 +13,4 @@ const recipeSchema = new mongoose.Schema({
   ]
 });
 
-mongoose.model("recipe", recipeSchema);
+mongoose.model("recipe", recipeSchema, "recipes");

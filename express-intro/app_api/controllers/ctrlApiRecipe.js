@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const recipeModel = mongoose.model('recipe');
 
 const recipeList = function (req, res) {
+
   recipeModel.find({}, function(err, recipes){
     if (err) {
       res.status(404).json(err);
@@ -28,4 +29,4 @@ const addRecipe = function (req, res){
 module.exports = {
   recipeList,
   addRecipe
-}
+};

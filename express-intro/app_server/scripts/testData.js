@@ -1,7 +1,7 @@
 
 db.dropDatabase();
 
-db.recipe.save(
+db.recipes.save(
   {
     name: "test",
     ingredients: [
@@ -17,7 +17,7 @@ db.recipe.save(
   }
 );
 
-db.recipe.save(
+db.recipes.save(
   {
     name: "test 2",
     ingredients: [

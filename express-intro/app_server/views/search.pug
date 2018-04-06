@@ -18,3 +18,20 @@ block content
         button.btn.btn-primary.btn-search(type="button") Search recipes
 
     div.col-md-3
+  
+  
+  div.row
+    div.col-md-3
+    div.col-md-6
+      ul
+        each recipe in recipes
+          h2= recipe.name
+          //- each ingredients in recipe
+          - let n = 0
+          while n < recipe.ingredients.length
+            li= recipe.ingredients[n].amount + " " + recipe.ingredients[n].name
+            - n++
+
+    div.col-md-3
+
+  

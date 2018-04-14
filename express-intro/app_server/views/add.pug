@@ -5,22 +5,39 @@ extends layout
 block header
   h1.title Add recipe
 
+
 block content
   div.row
     div.col-md-3
     
     div.col-md-6
-      br
-      h4="Recipe name"
-      input.form-control(type = "text")
-      br
-      br
-      br
-      h4= "Recipe ingredients and steps"
-      input.form-control(type = "text")
-      br
-      br
-      button.btn.btn-primary(type = "button") Add field
-      button.btn.btn-warning(type = "button") Remove last field
+
+      form(action = "", method = "POST")
+        div.form-group.row
+          label Recipe name
+            input.form-control(name = "name")
+              
+        div.form-group.row
+          label Ingredient
+            input.form-control(name = "ingredient")
+        
+        div.form-group.row
+          label Ingredient
+            input.form-control(name = "amount")
+        
+        //- div.form-group.row
+        //-   label Ingredient
+        //-     input.form-control(name = "ingredient")
+        //- 
+        //- div.form-group.row
+        //-   label Ingredient
+        //-     input.form-control(name = "amount")
+              
+        div.form-group.row
+          button.btn.btn-primary Add recipe
+
+
+      //- button.btn.btn-primary(type = "button") Add field
+      //- button.btn.btn-warning(type = "button") Remove last field
     
     div.col-md-3

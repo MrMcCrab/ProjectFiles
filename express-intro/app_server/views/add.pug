@@ -7,37 +7,41 @@ block header
 
 
 block content
+
   div.row
     div.col-md-3
     
     div.col-md-6
 
-      form(action = "", method = "POST")
+      form#form(action = "", method = "POST")
         div.form-group.row
           label Recipe name
             input.form-control(name = "name")
               
-        div.form-group.row
-          label Ingredient
-            input.form-control(name = "ingredient")
-        
-        div.form-group.row
-          label Ingredient
-            input.form-control(name = "amount")
-        
-        //- div.form-group.row
-        //-   label Ingredient
-        //-     input.form-control(name = "ingredient")
-        //- 
-        //- div.form-group.row
-        //-   label Ingredient
-        //-     input.form-control(name = "amount")
               
         div.form-group.row
-          button.btn.btn-primary Add recipe
+            input.form-control(name = "ingredient" placeholder = "Ingredient")
+        
+        div.form-group.row
+            input.form-control(name = "amount" placeholder = "Amount")
+      
+              
+
+      button.btn.btn-primary(form='form') Add recipe
 
 
-      //- button.btn.btn-primary(type = "button") Add field
-      //- button.btn.btn-warning(type = "button") Remove last field
+      button.btn.btn-primary(type = "button" onclick = 'addField()') Add field
+      button.btn.btn-warning(type = "button" onclick = 'removeField()') Remove last field
+      
+      script
+        include ../scripts/scripts.js
+        
     
     div.col-md-3
+      
+      
+      
+      
+      
+      
+      
